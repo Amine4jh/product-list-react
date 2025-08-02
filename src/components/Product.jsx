@@ -16,9 +16,9 @@ const Product = () => {
             <p>Add to Cart</p>
           </div>
 					<div className="add-more-to-cart">
-            <img src="assets/images/icon-increment-quantity.svg" />
-            <p>1</p>
             <img src="assets/images/icon-decrement-quantity.svg" />
+            <p>1</p>
+            <img src="assets/images/icon-increment-quantity.svg" />
           </div>
           <div className="product-content">
             <h6>{product.category}</h6>
