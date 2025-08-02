@@ -15,9 +15,7 @@ const App = () => {
           )) }
         </div>
       </div>
-      <div className="cart-container">
-        <Cart />
-      </div>
+      <Cart />
     </div>
   );
 };
