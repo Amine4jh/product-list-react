@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text";
+}
+body {
+  background: hsl(20, 50%, 98%);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+/* .content{
+  min-width: 1000px;
+} */
+
+/* Header */
+.content h1 {
+  margin: 0 1rem;
+  color: hsl(14, 65%, 9%);
+}
+
+/* Products */
+.products-container {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.products-container .product {
+  margin: 1rem;
+  position: relative;
+}
+.products-container .product #prodImg {
+  border-radius: 10px;
+}
+/* First Add To Cart */
+.product .add-to-cart-zeroCount {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: -30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background: #fff;
+  border: 2px solid hsl(7, 20%, 60%);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.add-to-cart-zeroCount img {
+  margin-right: 5px;
+}
+.add-to-cart-zeroCount p {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.add-to-cart-zeroCount:hover {
+  border-color: hsl(14, 86%, 42%);
+}
+.add-to-cart-zeroCount:hover > p {
+  color: hsl(14, 86%, 42%);
+}
+.product .product-content {
+  margin: 1.5rem 0 0.5rem 0;
+}
+.product .product-content h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(12, 20%, 44%);
+}
+.product .product-content h4 {
+  color: hsl(14, 65%, 9%);
+  margin: 3px 0;
+}
+.product .product-content span {
+  font-weight: 600;
+  color: hsl(14, 86%, 42%);
+}
+/* Increament | Decreament */
+.product .add-more-to-cart {
+  width: 170px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: -30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background: hsl(14, 86%, 42%);
+  color: #fff;
+  border: 2px solid hsl(14, 86%, 42%);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.product .add-more-to-cart img {
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.product .add-more-to-cart #plusIcon {
+  padding: 5px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.product .add-more-to-cart #plusIcon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.product .add-more-to-cart #minusIcon {
+  padding: 9px 5px;
+}
+.product .add-more-to-cart #minusIcon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+/* When adding to cart (Shows up minus and plus icons) */
+.product.addedToCart #prodImg {
+  border: 2px solid hsl(14, 86%, 42%);
+}
+.product.addedToCart .add-more-to-cart {
+  display: flex;
+}
+.product.addedToCart .add-to-cart-zeroCount {
+  display: none;
+}
+
+/* Cart */
