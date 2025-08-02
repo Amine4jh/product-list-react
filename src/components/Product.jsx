@@ -16,14 +16,14 @@ const Product = () => {
             <p>Add to Cart</p>
           </div>
 					<div className="add-more-to-cart">
-            <img src="assets/images/icon-decrement-quantity.svg" />
+            <img src="assets/images/icon-decrement-quantity.svg" id="minusIcon" />
             <p>1</p>
-            <img src="assets/images/icon-increment-quantity.svg" />
+            <img src="assets/images/icon-increment-quantity.svg" id="plusIcon" />
           </div>
           <div className="product-content">
             <h6>{product.category}</h6>
-            <h5>{product.name}</h5>
-            <span>{product.price}</span>
+            <h4>{product.name}</h4>
+            <span>${product.price.toFixed(2)}</span>
           </div>
         </div>
       ))}
