@@ -11,9 +11,14 @@ const Product = () => {
             alt="Product image"
             width={250}
           />
-          <div className="add">
+          <div className="add-to-cart-zeroCount">
             <img src="assets/images/icon-add-to-cart.svg" />
             <p>Add to Cart</p>
+          </div>
+					<div className="add-more-to-cart">
+            <img src="assets/images/icon-increment-quantity.svg" />
+            <p>1</p>
+            <img src="assets/images/icon-decrement-quantity.svg" />
           </div>
           <div className="product-content">
             <h6>{product.category}</h6>
