@@ -16,7 +16,10 @@ const ProductCard = ({ category, name, price, imgSrc }) => {
   return (
     <div className="product-card">
       <div className="image-container">
-        <img src={imgSrc} className="product-image" />
+        <img
+          src={imgSrc}
+          className={`product-image ${isSelected && "selected"}`}
+        />
         {isSelected ? (
           <QuantityControl onMinus={handleCounter} onPlus={handleCounter} />
         ) : (
