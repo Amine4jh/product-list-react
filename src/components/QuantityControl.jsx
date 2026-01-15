@@ -1,25 +1,11 @@
-import { useState } from "react";
-
-const QuantityControl = ({ onMinus, onPlus }) => {
-  const [counter, setCounter] = useState(1);
-
-  const handlePlus = () => {
-    setCounter(counter + 1);
-    onMinus(counter);
-  };
-
-  const handleMinus = () => {
-    setCounter(counter - 1);
-    onPlus(counter);
-  };
-
+const QuantityControl = ({ counter, onMinus, onPlus }) => {
   return (
     <div className="quantity-controls">
-      <button className="qty-btn" onClick={handleMinus}>
+      <button className="qty-btn" onClick={() => onMinus(counter)}>
         -
       </button>
       <span>{counter}</span>
-      <button className="qty-btn" onClick={handlePlus}>
+      <button className="qty-btn" onClick={() => onPlus(counter)}>
         +
       </button>
     </div>

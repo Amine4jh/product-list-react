@@ -4,13 +4,22 @@ import QuantityControl from "./QuantityControl";
 
 const ProductCard = ({ category, name, price, imgSrc }) => {
   const [isSelected, setIsSelected] = useState(false);
+  const [counter, setCounter] = useState(1);
 
   const handleSelect = (status) => {
     setIsSelected(status);
   };
 
-  const handleCounter = (counter) => {
-    counter == 1 && setIsSelected(false);
+  const handlePlus = (currentCounter) => {
+    setCounter(currentCounter + 1);
+  };
+
+  const handleMinus = (currentCounter) => {
+    setCounter(currentCounter - 1);
+    if (counter === 1) {
+      setIsSelected(false);
+      setCounter(1);
+    }
   };
 
   return (
@@ -21,7 +30,11 @@ const ProductCard = ({ category, name, price, imgSrc }) => {
           className={`product-image ${isSelected && "selected"}`}
         />
         {isSelected ? (
-          <QuantityControl onMinus={handleCounter} onPlus={handleCounter} />
+          <QuantityControl
+            counter={counter}
+            onMinus={handleMinus}
+            onPlus={handlePlus}
+          />
         ) : (
           <AddToCartBtn onSelect={handleSelect} />
         )}
